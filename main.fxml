@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
+  <columnConstraints>
+    <ColumnConstraints />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.6000244140625" minWidth="10.0" prefWidth="334.6000244140625" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.4000244140625" minWidth="10.0" prefWidth="276.19997558593747" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="196.80001831054688" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="201.60003662109375" minHeight="10.0" prefHeight="191.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="112.39999999999998" minHeight="10.0" prefHeight="87.80000000000001" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="109.80002441406248" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Payment Information" GridPane.columnIndex="1">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="120.0" left="72.0" />
+         </GridPane.margin>
+         <effect>
+            <Bloom>
+               <input>
+                  <Glow />
+               </input>
+            </Bloom>
+         </effect>
+      </Label>
+      <Label text="Total Loan Amount:  $ " textAlignment="CENTER" GridPane.columnIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="12.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Monthly Payment:  $ " GridPane.columnIndex="1">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="20.0" top="55.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Total Payment:  $ " GridPane.columnIndex="1">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="40.0" top="140.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="loanAmt" text="0.0" GridPane.columnIndex="1">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="180.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="monthlyAmt" text="0.0" textAlignment="CENTER" GridPane.columnIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="180.0" top="55.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="totalAmt" text="0.0" textAlignment="CENTER" GridPane.columnIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="180.0" top="140.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Financing Information" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="120.0" left="72.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <Bloom>
+               <input>
+                  <Glow />
+               </input>
+            </Bloom>
+         </effect>
+      </Label>
+      <Label text="Base Price:  $ " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="65.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Down Payment:  $ " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="32.0" top="55.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Sales Tax:  % " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="68.0" top="140.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="basePrice" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="15.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="175.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="downPayment" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="15.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="175.0" top="55.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="salesTax" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="12.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="6.0" left="10.0" right="10.0" top="6.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="175.0" top="140.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="calculateBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Calculate" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="180.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="resetBtn" mnemonicParsing="false" text="Reset" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Label text="Loan Term" textAlignment="CENTER" GridPane.columnIndex="2">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <Bloom>
+               <input>
+                  <Glow />
+               </input>
+            </Bloom>
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="120.0" left="65.0" />
+         </GridPane.margin>
+      </Label>
+      <RadioButton fx:id="months24" contentDisplay="CENTER" mnemonicParsing="false" text="24 Months" textAlignment="CENTER" GridPane.columnIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="44.0" left="65.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+         </padding>
+      </RadioButton>
+      <RadioButton fx:id="months36" contentDisplay="CENTER" mnemonicParsing="false" text="36 Months" textAlignment="CENTER" GridPane.columnIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="65.0" top="20.0" />
+         </GridPane.margin>
+      </RadioButton>
+      <RadioButton fx:id="months48" contentDisplay="CENTER" mnemonicParsing="false" text="48 Months" GridPane.columnIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="65.0" top="85.0" />
+         </GridPane.margin>
+      </RadioButton>
+      <RadioButton fx:id="months60" contentDisplay="CENTER" mnemonicParsing="false" text="60 Months" textAlignment="CENTER" GridPane.columnIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="65.0" top="150.0" />
+         </GridPane.margin>
+      </RadioButton>
+      <Label contentDisplay="CENTER" text="Extra Options" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <Bloom>
+               <input>
+                  <Glow />
+               </input>
+            </Bloom>
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="120.0" left="65.0" />
+         </GridPane.margin>
+      </Label>
+      <CheckBox fx:id="sunRoof" contentDisplay="CENTER" mnemonicParsing="false" text="Sun Roof:  $1510" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="35.0" left="60.0" />
+         </GridPane.margin>
+      </CheckBox>
+      <CheckBox fx:id="touchScreen" contentDisplay="CENTER" mnemonicParsing="false" text="Touch Screen:  $470" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="60.0" top="50.0" />
+         </GridPane.margin>
+      </CheckBox>
+      <CheckBox fx:id="rearCamera" contentDisplay="CENTER" mnemonicParsing="false" text="Rear Camera:  $340" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="60.0" top="135.0" />
+         </GridPane.margin>
+      </CheckBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</GridPane>
